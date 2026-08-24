@@ -1,0 +1,2124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Шеф-ИИ — Пользовательское соглашение и политика конфиденциальности</title>
+
+    <meta name="description" content="Официальные условия использования, политика конфиденциальности и дисклеймер сервиса Шеф-ИИ / ИИ-Повар.">
+    <meta name="robots" content="index, follow">
+
+    <style>
+        :root {
+            --bg: #0d1110;
+            --card: #151b18;
+            --card-hover: #1a211e;
+            --text: #f1f4f2;
+            --muted: #a8b2ad;
+            --border: #29332e;
+            --green: #2f7d5b;
+            --green-light: #43a477;
+            --gold: #c9a85c;
+            --gold-light: #e0c47c;
+            --danger: #d96b6b;
+            --shadow: rgba(0, 0, 0, 0.35);
+        }
+
+        body.light {
+            --bg: #f5f7f5;
+            --card: #ffffff;
+            --card-hover: #f0f4f1;
+            --text: #18201c;
+            --muted: #647069;
+            --border: #dce4df;
+            --green: #286b4d;
+            --green-light: #348760;
+            --gold: #9a762c;
+            --gold-light: #b18b3c;
+            --danger: #b94b4b;
+            --shadow: rgba(22, 40, 30, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family:
+                Inter,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Arial,
+                sans-serif;
+
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            transition:
+                background 0.25s ease,
+                color 0.25s ease;
+        }
+
+        a {
+            color: var(--gold-light);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            width: min(1120px, calc(100% - 32px));
+            margin: 0 auto;
+        }
+
+        /* HEADER */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(16px);
+            background: color-mix(in srgb, var(--bg) 88%, transparent);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .header-inner {
+            min-height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 13px;
+        }
+
+        .brand-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(
+                135deg,
+                var(--green),
+                #1c503a
+            );
+            color: white;
+            font-size: 22px;
+            box-shadow: 0 8px 25px rgba(47, 125, 91, 0.25);
+        }
+
+        .brand-text strong {
+            display: block;
+            font-size: 17px;
+            letter-spacing: -0.2px;
+        }
+
+        .brand-text span {
+            display: block;
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        button {
+            border: 0;
+            font: inherit;
+            cursor: pointer;
+        }
+
+        .control {
+            height: 40px;
+            padding: 0 12px;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            background: var(--card);
+            color: var(--text);
+            transition: 0.2s ease;
+        }
+
+        .control:hover {
+            background: var(--card-hover);
+            border-color: var(--green);
+        }
+
+        .language {
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        /* HERO */
+
+        .hero {
+            padding: 82px 0 60px;
+            text-align: center;
+        }
+
+        .age-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 7px 12px;
+            margin-bottom: 22px;
+            border-radius: 999px;
+            border: 1px solid rgba(201, 168, 92, 0.35);
+            background: rgba(201, 168, 92, 0.08);
+            color: var(--gold-light);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.4px;
+        }
+
+        .hero h1 {
+            max-width: 850px;
+            margin: 0 auto 18px;
+            font-size: clamp(34px, 6vw, 60px);
+            line-height: 1.08;
+            letter-spacing: -2px;
+        }
+
+        .hero h1 span {
+            color: var(--green-light);
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: 0 auto;
+            color: var(--muted);
+            font-size: 17px;
+        }
+
+        /* NAV */
+
+        .section-nav {
+            margin-bottom: 50px;
+        }
+
+        .nav-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+
+        .nav-card {
+            padding: 18px;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            background: var(--card);
+            color: var(--text);
+            transition: 0.2s ease;
+        }
+
+        .nav-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--green);
+            text-decoration: none;
+        }
+
+        .nav-number {
+            color: var(--gold-light);
+            font-size: 12px;
+            font-weight: 800;
+            margin-bottom: 5px;
+        }
+
+        .nav-title {
+            font-weight: 700;
+            font-size: 15px;
+        }
+
+        /* SECTIONS */
+
+        section {
+            scroll-margin-top: 100px;
+        }
+
+        .legal-section {
+            margin-bottom: 28px;
+            padding: 34px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            box-shadow: 0 12px 40px var(--shadow);
+        }
+
+        .section-heading {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .section-icon {
+            flex: 0 0 auto;
+            width: 46px;
+            height: 46px;
+            border-radius: 12px;
+            background: rgba(47, 125, 91, 0.12);
+            color: var(--green-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 21px;
+        }
+
+        .section-heading h2 {
+            font-size: clamp(24px, 4vw, 32px);
+            line-height: 1.2;
+            letter-spacing: -0.7px;
+        }
+
+        .section-heading p {
+            margin-top: 5px;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .legal-section h3 {
+            margin: 30px 0 10px;
+            font-size: 18px;
+            color: var(--gold-light);
+        }
+
+        .legal-section h3:first-of-type {
+            margin-top: 0;
+        }
+
+        .legal-section p {
+            margin-bottom: 12px;
+            color: var(--text);
+        }
+
+        .legal-section ul,
+        .legal-section ol {
+            margin: 12px 0 18px 23px;
+        }
+
+        .legal-section li {
+            margin-bottom: 8px;
+            padding-left: 4px;
+        }
+
+        /* IMPORTANT BOX */
+
+        .important {
+            margin: 22px 0;
+            padding: 19px 20px;
+            border-left: 4px solid var(--gold);
+            background: rgba(201, 168, 92, 0.07);
+            border-radius: 0 12px 12px 0;
+        }
+
+        .important strong {
+            color: var(--gold-light);
+        }
+
+        .warning {
+            margin: 22px 0;
+            padding: 19px 20px;
+            border-left: 4px solid var(--danger);
+            background: rgba(217, 107, 107, 0.07);
+            border-radius: 0 12px 12px 0;
+        }
+
+        .warning strong {
+            color: var(--danger);
+        }
+
+        /* DATA TABLE */
+
+        .data-table-wrapper {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        .data-table th,
+        .data-table td {
+            padding: 13px 14px;
+            text-align: left;
+            border: 1px solid var(--border);
+        }
+
+        .data-table th {
+            background: rgba(47, 125, 91, 0.1);
+            color: var(--gold-light);
+            font-weight: 700;
+        }
+
+        /* BOT BUTTON */
+
+        .bot-box {
+            margin-top: 25px;
+            padding: 24px;
+            border-radius: 16px;
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(47, 125, 91, 0.18),
+                    rgba(201, 168, 92, 0.08)
+                );
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .bot-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            padding: 13px 21px;
+            margin-top: 12px;
+            border-radius: 11px;
+            background: var(--green);
+            color: #fff;
+            font-weight: 700;
+            transition: 0.2s ease;
+        }
+
+        .bot-button:hover {
+            background: var(--green-light);
+            transform: translateY(-1px);
+            text-decoration: none;
+        }
+
+        /* FOOTER */
+
+        footer {
+            margin-top: 50px;
+            padding: 42px 0;
+            border-top: 1px solid var(--border);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 30px;
+        }
+
+        .footer-title {
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .footer-text {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+            font-size: 14px;
+        }
+
+        .copyright {
+            margin-top: 35px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        /* LANGUAGE */
+
+        [data-lang] {
+            display: none;
+        }
+
+        [data-lang].active {
+            display: block;
+        }
+
+        .inline.active {
+            display: inline;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 760px) {
+
+            .container {
+                width: min(100% - 22px, 1120px);
+            }
+
+            .header-inner {
+                min-height: 68px;
+            }
+
+            .brand-text span {
+                display: none;
+            }
+
+            .brand-text strong {
+                font-size: 14px;
+            }
+
+            .brand-icon {
+                width: 39px;
+                height: 39px;
+                font-size: 19px;
+            }
+
+            .control {
+                height: 36px;
+                padding: 0 9px;
+                font-size: 12px;
+            }
+
+            .hero {
+                padding: 55px 0 42px;
+            }
+
+            .hero h1 {
+                letter-spacing: -1px;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            .nav-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .legal-section {
+                padding: 23px 18px;
+                border-radius: 16px;
+            }
+
+            .section-heading {
+                gap: 11px;
+            }
+
+            .section-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 18px;
+            }
+
+            .section-heading h2 {
+                font-size: 23px;
+            }
+
+            .legal-section h3 {
+                font-size: 17px;
+            }
+
+            .legal-section p,
+            .legal-section li {
+                font-size: 14px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="container header-inner">
+
+        <a href="#" class="brand">
+            <div class="brand-icon">👨‍🍳</div>
+
+            <div class="brand-text">
+                <strong>Шеф-ИИ / ИИ-Повар</strong>
+
+                <span data-lang="ru" class="active">
+                    Официальные документы сервиса
+                </span>
+
+                <span data-lang="uk">
+                    Офіційні документи сервісу
+                </span>
+
+                <span data-lang="en">
+                    Official service documents
+                </span>
+            </div>
+        </a>
+
+        <div class="header-actions">
+
+            <button
+                class="control language"
+                id="languageButton"
+                type="button"
+                aria-label="Change language">
+                RU
+            </button>
+
+            <button
+                class="control"
+                id="themeButton"
+                type="button"
+                aria-label="Change theme">
+                ☀️
+            </button>
+
+        </div>
+
+    </div>
+</header>
+
+
+<main>
+
+    <!-- HERO -->
+
+    <section class="hero">
+        <div class="container">
+
+            <div class="age-badge">
+                🔞 18+
+                <span data-lang="ru" class="active">Возрастное ограничение</span>
+                <span data-lang="uk">Вікове обмеження</span>
+                <span data-lang="en">Age restriction</span>
+            </div>
+
+            <h1 data-lang="ru" class="active">
+                Официальные условия
+                <span>Шеф-ИИ</span>
+            </h1>
+
+            <h1 data-lang="uk">
+                Офіційні умови
+                <span>Шеф-ІІ</span>
+            </h1>
+
+            <h1 data-lang="en">
+                Official
+                <span>Chef-AI</span>
+                Terms
+            </h1>
+
+            <p data-lang="ru" class="active">
+                Пользовательское соглашение, политика конфиденциальности
+                и отказ от ответственности для Telegram-бота
+                «Шеф-ИИ / ИИ-Повар» и функции «Шеф-Сомелье».
+            </p>
+
+            <p data-lang="uk">
+                Користувацька угода, політика конфіденційності
+                та відмова від відповідальності для Telegram-бота
+                «Шеф-ІІ / ІІ-Кухар» і функції «Шеф-Сомельє».
+            </p>
+
+            <p data-lang="en">
+                Terms of Use, Privacy Policy and Disclaimer
+                for the Telegram bot «Chef-AI / AI-Chef»
+                and the «Chef-Sommelier» feature.
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- NAVIGATION -->
+
+    <div class="container section-nav">
+
+        <div class="nav-grid">
+
+            <a href="#disclaimer" class="nav-card">
+                <div class="nav-number">01</div>
+
+                <div data-lang="ru" class="nav-title active">
+                    Отказ от ответственности 18+
+                </div>
+
+                <div data-lang="uk" class="nav-title">
+                    Відмова від відповідальності 18+
+                </div>
+
+                <div data-lang="en" class="nav-title">
+                    18+ Disclaimer
+                </div>
+            </a>
+
+            <a href="#terms" class="nav-card">
+                <div class="nav-number">02</div>
+
+                <div data-lang="ru" class="nav-title active">
+                    Пользовательское соглашение
+                </div>
+
+                <div data-lang="uk" class="nav-title">
+                    Користувацька угода
+                </div>
+
+                <div data-lang="en" class="nav-title">
+                    Terms of Use
+                </div>
+            </a>
+
+            <a href="#privacy" class="nav-card">
+                <div class="nav-number">03</div>
+
+                <div data-lang="ru" class="nav-title active">
+                    Политика конфиденциальности
+                </div>
+
+                <div data-lang="uk" class="nav-title">
+                    Політика конфіденційності
+                </div>
+
+                <div data-lang="en" class="nav-title">
+                    Privacy Policy
+                </div>
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="container">
+
+        <!-- =====================================================
+             DISCLAIMER RU
+        ====================================================== -->
+
+        <section id="disclaimer" class="legal-section">
+
+            <div data-lang="ru" class="active">
+
+                <div class="section-heading">
+                    <div class="section-icon">🔞</div>
+
+                    <div>
+                        <h2>Отказ от ответственности 18+</h2>
+                        <p>Дисклеймер «Шеф-Сомелье» и возрастной ценз</p>
+                    </div>
+                </div>
+
+                <div class="warning">
+                    <strong>Важно:</strong>
+                    функция «Шеф-Сомелье» и любые рекомендации,
+                    связанные с алкогольными напитками, предназначены
+                    исключительно для лиц, достигших 18-летнего возраста.
+                </div>
+
+                <h3>1.1. Подтверждение возраста</h3>
+
+                <p>
+                    Использование функции «Шеф-Сомелье», а также получение
+                    рекомендаций, связанных с алкогольными напитками,
+                    допускается только лицами, достигшими 18 лет.
+                </p>
+
+                <p>
+                    Нажатие пользователем кнопки «Да, мне есть 18»
+                    в Telegram-боте означает подтверждение пользователем
+                    достижения им возраста 18 лет и его согласие
+                    с настоящими условиями в части использования
+                    соответствующих функций.
+                </p>
+
+                <div class="important">
+                    <strong>Ответственность за возраст.</strong>
+                    Пользователь самостоятельно и исключительно отвечает
+                    за достоверность предоставленных сведений о своем возрасте.
+                    Сервис не осуществляет документальную проверку возраста,
+                    если иное прямо не предусмотрено функциональностью сервиса
+                    или применимым законодательством.
+                </div>
+
+                <h3>1.2. Характер рекомендаций</h3>
+
+                <p>
+                    Сервис может предоставлять рекомендации по подбору
+                    напитков, включая винные пары, сочетания еды и напитков,
+                    описание вкусовых характеристик и общую гастрономическую
+                    информацию.
+                </p>
+
+                <p>
+                    Такие рекомендации предоставляются исключительно
+                    в ознакомительных, кулинарных и гастрономических целях.
+                    Они не являются индивидуальной рекомендацией врача,
+                    диетолога, сомелье, юриста или иного квалифицированного
+                    специалиста.
+                </p>
+
+                <h3>1.3. Отсутствие продажи алкоголя</h3>
+
+                <p>
+                    Сервис не осуществляет продажу, покупку, посредничество,
+                    рекламирование, дистанционную доставку или иное
+                    коммерческое распространение алкогольных напитков.
+                </p>
+
+                <p>
+                    Сервис не принимает оплату за алкогольные напитки
+                    и не оформляет заказы на их приобретение.
+                </p>
+
+                <h3>1.4. Ответственность пользователя</h3>
+
+                <p>
+                    Пользователь самостоятельно принимает решения о том,
+                    использовать ли полученную информацию.
+                </p>
+
+                <p>
+                    Все последующие действия пользователя с алкогольными
+                    напитками, включая их приобретение, хранение,
+                    употребление и последствия такого употребления,
+                    находятся вне контроля сервиса и являются
+                    ответственностью пользователя.
+                </p>
+
+                <h3>1.5. Соблюдение законодательства</h3>
+
+                <p>
+                    Пользователь обязан соблюдать законодательство страны,
+                    в которой он находится, включая требования,
+                    касающиеся возраста, приобретения, хранения,
+                    употребления и иных действий, связанных
+                    с алкогольными напитками.
+                </p>
+
+            </div>
+
+
+            <!-- DISCLAIMER UK -->
+
+            <div data-lang="uk">
+
+                <div class="section-heading">
+                    <div class="section-icon">🔞</div>
+
+                    <div>
+                        <h2>Відмова від відповідальності 18+</h2>
+                        <p>Дисклеймер «Шеф-Сомельє» та вікове обмеження</p>
+                    </div>
+                </div>
+
+                <div class="warning">
+                    <strong>Важливо:</strong>
+                    функція «Шеф-Сомельє» та будь-які рекомендації,
+                    пов'язані з алкогольними напоями, призначені
+                    виключно для осіб, які досягли 18-річного віку.
+                </div>
+
+                <h3>1.1. Підтвердження віку</h3>
+
+                <p>
+                    Використання функції «Шеф-Сомельє», а також отримання
+                    рекомендацій, пов'язаних з алкогольними напоями,
+                    дозволяється лише особам, які досягли 18 років.
+                </p>
+
+                <p>
+                    Натискання користувачем кнопки «Так, мені є 18»
+                    у Telegram-боті означає підтвердження користувачем
+                    досягнення ним 18-річного віку та його згоду
+                    з цими умовами в частині використання відповідних
+                    функцій.
+                </p>
+
+                <div class="important">
+                    <strong>Відповідальність за вік.</strong>
+                    Користувач самостійно та виключно відповідає
+                    за достовірність наданих відомостей про свій вік.
+                </div>
+
+                <h3>1.2. Характер рекомендацій</h3>
+
+                <p>
+                    Сервіс може надавати рекомендації щодо підбору напоїв,
+                    включаючи винні пари, поєднання їжі та напоїв,
+                    опис смакових характеристик та загальну
+                    гастрономічну інформацію.
+                </p>
+
+                <p>
+                    Такі рекомендації надаються виключно в ознайомчих,
+                    кулінарних та гастрономічних цілях і не є
+                    індивідуальною рекомендацією лікаря, дієтолога,
+                    сомельє, юриста чи іншого кваліфікованого фахівця.
+                </p>
+
+                <h3>1.3. Відсутність продажу алкоголю</h3>
+
+                <p>
+                    Сервіс не здійснює продаж, купівлю, посередництво,
+                    рекламування, дистанційну доставку або інше
+                    комерційне розповсюдження алкогольних напоїв.
+                </p>
+
+                <h3>1.4. Відповідальність користувача</h3>
+
+                <p>
+                    Користувач самостійно приймає рішення щодо використання
+                    отриманої інформації. Усі подальші дії користувача
+                    з алкогольними напоями перебувають поза контролем
+                    сервісу та є відповідальністю користувача.
+                </p>
+
+                <h3>1.5. Дотримання законодавства</h3>
+
+                <p>
+                    Користувач зобов'язаний дотримуватися законодавства
+                    країни свого перебування, включаючи вимоги щодо
+                    віку, придбання, зберігання та вживання алкогольних
+                    напоїв.
+                </p>
+
+            </div>
+
+
+            <!-- DISCLAIMER EN -->
+
+            <div data-lang="en">
+
+                <div class="section-heading">
+                    <div class="section-icon">🔞</div>
+
+                    <div>
+                        <h2>18+ Disclaimer</h2>
+                        <p>Chef-Sommelier disclaimer and age restriction</p>
+                    </div>
+                </div>
+
+                <div class="warning">
+                    <strong>Important:</strong>
+                    the Chef-Sommelier feature and any recommendations
+                    concerning alcoholic beverages are intended exclusively
+                    for persons aged 18 or older.
+                </div>
+
+                <h3>1.1. Age confirmation</h3>
+
+                <p>
+                    The Chef-Sommelier feature and recommendations
+                    concerning alcoholic beverages may only be used
+                    by persons aged 18 or older.
+                </p>
+
+                <p>
+                    By pressing the “Yes, I am 18” button in the Telegram bot,
+                    the user confirms that they are at least 18 years old
+                    and accepts these terms with respect to the relevant
+                    features.
+                </p>
+
+                <div class="important">
+                    <strong>Age responsibility.</strong>
+                    The user is solely responsible for the accuracy
+                    of the age information provided by them.
+                </div>
+
+                <h3>1.2. Nature of recommendations</h3>
+
+                <p>
+                    The service may provide beverage pairing recommendations,
+                    including wine pairings, food and beverage combinations,
+                    taste descriptions and general gastronomic information.
+                </p>
+
+                <p>
+                    Such recommendations are provided for informational,
+                    culinary and gastronomic purposes only and do not
+                    constitute medical, dietary, legal or professional
+                    sommelier advice.
+                </p>
+
+                <h3>1.3. No alcohol sales</h3>
+
+                <p>
+                    The service does not sell, purchase, broker, advertise,
+                    deliver or otherwise commercially distribute alcoholic
+                    beverages.
+                </p>
+
+                <h3>1.4. User responsibility</h3>
+
+                <p>
+                    The user independently decides whether and how to use
+                    the information provided. Any subsequent actions involving
+                    alcoholic beverages are outside the service's control
+                    and remain the user's responsibility.
+                </p>
+
+                <h3>1.5. Compliance with law</h3>
+
+                <p>
+                    The user must comply with the laws of the country
+                    in which they are located, including applicable rules
+                    concerning age, purchase, possession and consumption
+                    of alcoholic beverages.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             TERMS
+        ====================================================== -->
+
+        <section id="terms" class="legal-section">
+
+            <div data-lang="ru" class="active">
+
+                <div class="section-heading">
+                    <div class="section-icon">📄</div>
+
+                    <div>
+                        <h2>Пользовательское соглашение</h2>
+                        <p>Условия использования сервиса «Шеф-ИИ / ИИ-Повар»</p>
+                    </div>
+                </div>
+
+                <h3>2.1. Общие положения</h3>
+
+                <p>
+                    Настоящее Пользовательское соглашение регулирует
+                    использование Telegram-бота «Шеф-ИИ / ИИ-Повар»,
+                    включая его кулинарные функции и функцию
+                    «Шеф-Сомелье».
+                </p>
+
+                <p>
+                    Используя сервис, пользователь подтверждает,
+                    что ознакомился с настоящими условиями и принимает
+                    их в полном объеме в части, применимой к используемым
+                    функциям сервиса.
+                </p>
+
+                <h3>2.2. Возможности сервиса</h3>
+
+                <p>
+                    Сервис может предоставлять, в частности:
+                </p>
+
+                <ul>
+                    <li>рекомендации по приготовлению блюд;</li>
+                    <li>рецепты и кулинарные идеи;</li>
+                    <li>анализ предоставленных пользователем продуктов;</li>
+                    <li>рекомендации на основании изображений продуктов;</li>
+                    <li>ориентировочные сведения о пищевой ценности;</li>
+                    <li>информацию об ингредиентах и потенциальных аллергенах;</li>
+                    <li>гастрономические рекомендации;</li>
+                    <li>рекомендации по сочетанию блюд и напитков.</li>
+                </ul>
+
+                <h3>2.3. Искусственный интеллект</h3>
+
+                <p>
+                    Ответы сервиса формируются с использованием технологий
+                    искусственного интеллекта.
+                </p>
+
+                <p>
+                    Рекомендации, рецепты, сведения об ингредиентах,
+                    аллергенах, БЖУ и пищевой ценности носят
+                    исключительно информационный и справочный характер.
+                </p>
+
+                <div class="warning">
+                    <strong>Важно:</strong>
+                    искусственный интеллект может ошибаться, предоставлять
+                    неполную, неточную или устаревшую информацию.
+                    Пользователь обязан самостоятельно оценивать
+                    полученные рекомендации.
+                </div>
+
+                <h3>2.4. Аллергии и индивидуальная переносимость</h3>
+
+                <p>
+                    Информация об аллергенах не является гарантией
+                    отсутствия аллергена в конкретном продукте или блюде.
+                </p>
+
+                <p>
+                    Пользователь обязан самостоятельно проверять состав
+                    продуктов, маркировку производителя и индивидуальную
+                    переносимость ингредиентов перед употреблением пищи.
+                </p>
+
+                <p>
+                    При наличии пищевой аллергии, непереносимости,
+                    заболевания или иных медицинских ограничений
+                    пользователь должен обратиться к квалифицированному
+                    медицинскому специалисту.
+                </p>
+
+                <h3>2.5. БЖУ и пищевая ценность</h3>
+
+                <p>
+                    Любые сведения о белках, жирах, углеводах,
+                    калорийности и других показателях пищевой ценности
+                    являются ориентировочными.
+                </p>
+
+                <p>
+                    Фактические показатели могут отличаться в зависимости
+                    от производителя, состава, количества и способа
+                    приготовления продуктов.
+                </p>
+
+                <h3>2.6. Ограничение ответственности</h3>
+
+                <p>
+                    В пределах, допускаемых применимым законодательством,
+                    сервис не гарантирует абсолютную точность,
+                    полноту, актуальность или пригодность предоставленной
+                    информации для конкретной цели пользователя.
+                </p>
+
+                <p>
+                    Пользователь самостоятельно принимает решения,
+                    основанные на информации, полученной от сервиса,
+                    и несет ответственность за последствия таких решений.
+                </p>
+
+                <h3>2.7. Запрещенное использование</h3>
+
+                <p>
+                    Пользователь не должен использовать сервис для
+                    незаконных целей, нарушения прав третьих лиц,
+                    распространения вредоносного контента или иных
+                    действий, запрещенных применимым законодательством.
+                </p>
+
+                <h3>2.8. Изменение условий</h3>
+
+                <p>
+                    Условия настоящего соглашения могут периодически
+                    обновляться. Актуальная версия публикуется на этой
+                    странице.
+                </p>
+
+            </div>
+
+
+            <!-- TERMS UK -->
+
+            <div data-lang="uk">
+
+                <div class="section-heading">
+                    <div class="section-icon">📄</div>
+
+                    <div>
+                        <h2>Користувацька угода</h2>
+                        <p>Умови використання сервісу «Шеф-ІІ / ІІ-Кухар»</p>
+                    </div>
+                </div>
+
+                <h3>2.1. Загальні положення</h3>
+
+                <p>
+                    Ця Користувацька угода регулює використання
+                    Telegram-бота «Шеф-ІІ / ІІ-Кухар», включаючи
+                    його кулінарні функції та функцію «Шеф-Сомельє».
+                </p>
+
+                <p>
+                    Використовуючи сервіс, користувач підтверджує,
+                    що ознайомився з цими умовами та приймає їх
+                    у повному обсязі в частині, що застосовується
+                    до функцій сервісу, які він використовує.
+                </p>
+
+                <h3>2.2. Можливості сервісу</h3>
+
+                <p>Сервіс може надавати, зокрема:</p>
+
+                <ul>
+                    <li>рекомендації щодо приготування страв;</li>
+                    <li>рецепти та кулінарні ідеї;</li>
+                    <li>аналіз наданих користувачем продуктів;</li>
+                    <li>рекомендації на основі зображень продуктів;</li>
+                    <li>орієнтовні відомості про харчову цінність;</li>
+                    <li>інформацію про інгредієнти та потенційні алергени;</li>
+                    <li>гастрономічні рекомендації;</li>
+                    <li>рекомендації щодо поєднання страв і напоїв.</li>
+                </ul>
+
+                <h3>2.3. Штучний інтелект</h3>
+
+                <p>
+                    Відповіді сервісу формуються з використанням
+                    технологій штучного інтелекту.
+                </p>
+
+                <p>
+                    Рекомендації, рецепти, відомості про інгредієнти,
+                    алергени, БЖВ та харчову цінність мають виключно
+                    інформаційний та довідковий характер.
+                </p>
+
+                <div class="warning">
+                    <strong>Важливо:</strong>
+                    штучний інтелект може помилятися або надавати
+                    неповну, неточну чи застарілу інформацію.
+                </div>
+
+                <h3>2.4. Алергії та індивідуальна переносимість</h3>
+
+                <p>
+                    Інформація про алергени не є гарантією відсутності
+                    алергену в конкретному продукті або страві.
+                    Користувач повинен самостійно перевіряти склад
+                    продуктів та їх індивідуальну переносимість.
+                </p>
+
+                <h3>2.5. БЖВ та харчова цінність</h3>
+
+                <p>
+                    Будь-які відомості про білки, жири, вуглеводи,
+                    калорійність та інші показники харчової цінності
+                    є орієнтовними.
+                </p>
+
+                <h3>2.6. Обмеження відповідальності</h3>
+
+                <p>
+                    У межах, дозволених законодавством, сервіс
+                    не гарантує абсолютну точність, повноту,
+                    актуальність або придатність наданої інформації
+                    для конкретної мети користувача.
+                </p>
+
+                <p>
+                    Користувач самостійно приймає рішення на підставі
+                    отриманої інформації та несе відповідальність
+                    за наслідки таких рішень.
+                </p>
+
+                <h3>2.7. Заборонене використання</h3>
+
+                <p>
+                    Користувач не повинен використовувати сервіс
+                    для незаконних цілей, порушення прав третіх осіб
+                    або інших дій, заборонених законодавством.
+                </p>
+
+                <h3>2.8. Зміна умов</h3>
+
+                <p>
+                    Умови цієї угоди можуть періодично оновлюватися.
+                    Актуальна версія публікується на цій сторінці.
+                </p>
+
+            </div>
+
+
+            <!-- TERMS EN -->
+
+            <div data-lang="en">
+
+                <div class="section-heading">
+                    <div class="section-icon">📄</div>
+
+                    <div>
+                        <h2>Terms of Use</h2>
+                        <p>Terms governing the Chef-AI service</p>
+                    </div>
+                </div>
+
+                <h3>2.1. General provisions</h3>
+
+                <p>
+                    These Terms of Use govern the use of the
+                    «Chef-AI / AI-Chef» Telegram bot, including
+                    its culinary features and the Chef-Sommelier feature.
+                </p>
+
+                <p>
+                    By using the service, the user confirms that they
+                    have read and accepted these terms to the extent
+                    applicable to the features they use.
+                </p>
+
+                <h3>2.2. Service features</h3>
+
+                <p>The service may provide:</p>
+
+                <ul>
+                    <li>cooking recommendations;</li>
+                    <li>recipes and culinary ideas;</li>
+                    <li>analysis of user-provided ingredients;</li>
+                    <li>recommendations based on food images;</li>
+                    <li>estimated nutritional information;</li>
+                    <li>ingredient and potential allergen information;</li>
+                    <li>gastronomic recommendations;</li>
+                    <li>food and beverage pairing recommendations.</li>
+                </ul>
+
+                <h3>2.3. Artificial intelligence</h3>
+
+                <p>
+                    Service responses are generated using
+                    artificial intelligence technologies.
+                </p>
+
+                <p>
+                    Recipes and information concerning ingredients,
+                    allergens, nutritional values and BJU are provided
+                    for informational purposes only.
+                </p>
+
+                <div class="warning">
+                    <strong>Important:</strong>
+                    artificial intelligence may produce incomplete,
+                    inaccurate or outdated information.
+                </div>
+
+                <h3>2.4. Allergies and individual tolerance</h3>
+
+                <p>
+                    Allergen information does not guarantee that a particular
+                    product or dish is free from allergens. Users must
+                    independently verify ingredients, product labels
+                    and individual tolerance.
+                </p>
+
+                <h3>2.5. Nutritional information</h3>
+
+                <p>
+                    Any information concerning calories, proteins, fats,
+                    carbohydrates and other nutritional values is approximate.
+                </p>
+
+                <h3>2.6. Limitation of liability</h3>
+
+                <p>
+                    To the extent permitted by applicable law, the service
+                    does not guarantee the absolute accuracy, completeness,
+                    currency or suitability of the information provided
+                    for any particular purpose.
+                </p>
+
+                <p>
+                    The user independently makes decisions based on the
+                    information received and remains responsible for
+                    the consequences of such decisions.
+                </p>
+
+                <h3>2.7. Prohibited use</h3>
+
+                <p>
+                    The user must not use the service for unlawful purposes,
+                    infringement of third-party rights or other activities
+                    prohibited by applicable law.
+                </p>
+
+                <h3>2.8. Changes to the terms</h3>
+
+                <p>
+                    These terms may be updated from time to time.
+                    The current version will be published on this page.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             PRIVACY
+        ====================================================== -->
+
+        <section id="privacy" class="legal-section">
+
+            <div data-lang="ru" class="active">
+
+                <div class="section-heading">
+                    <div class="section-icon">🔐</div>
+
+                    <div>
+                        <h2>Политика конфиденциальности</h2>
+                        <p>Обработка и защита пользовательских данных</p>
+                    </div>
+                </div>
+
+                <h3>3.1. Общие положения</h3>
+
+                <p>
+                    Настоящая Политика конфиденциальности описывает
+                    основные принципы обработки данных пользователей
+                    Telegram-бота «Шеф-ИИ / ИИ-Повар».
+                </p>
+
+                <p>
+                    Сервис стремится обрабатывать только минимальный
+                    объем данных, необходимый для корректной работы
+                    функциональности бота.
+                </p>
+
+                <h3>3.2. Какие данные могут обрабатываться</h3>
+
+                <div class="data-table-wrapper">
+
+                    <table class="data-table">
+
+                        <thead>
+                            <tr>
+                                <th>Данные</th>
+                                <th>Цель обработки</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>Telegram ID</td>
+                                <td>
+                                    Идентификация пользователя
+                                    и корректная работа функций бота
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Выбранный язык</td>
+                                <td>
+                                    Отображение ответов и интерфейса
+                                    на выбранном языке
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Пищевые предпочтения</td>
+                                <td>
+                                    Персонализация кулинарных рекомендаций
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Информация об аллергиях</td>
+                                <td>
+                                    Учет пользовательских ограничений
+                                    при формировании рекомендаций
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+                <h3>3.3. Цели обработки</h3>
+
+                <p>
+                    Данные используются исключительно в объеме,
+                    необходимом для:
+                </p>
+
+                <ul>
+                    <li>идентификации пользователя внутри сервиса;</li>
+                    <li>работы функций Telegram-бота;</li>
+                    <li>сохранения выбранного языка;</li>
+                    <li>учета указанных пользователем пищевых предпочтений;</li>
+                    <li>учета предоставленной пользователем информации
+                        об аллергиях и ограничениях;</li>
+                    <li>улучшения качества работы сервиса.</li>
+                </ul>
+
+                <h3>3.4. Минимизация данных</h3>
+
+                <p>
+                    Сервис не стремится собирать сведения, которые
+                    не требуются для предоставления соответствующих
+                    функций.
+                </p>
+
+                <p>
+                    Пользователю рекомендуется не передавать боту
+                    пароли, данные банковских карт, документы,
+                    адрес проживания и иные чувствительные сведения,
+                    если они не требуются для работы конкретной функции.
+                </p>
+
+                <h3>3.5. Telegram</h3>
+
+                <p>
+                    Пользователь взаимодействует с сервисом посредством
+                    платформы Telegram. Обработка данных самой платформой
+                    Telegram регулируется ее собственными правилами
+                    и политиками конфиденциальности.
+                </p>
+
+                <h3>3.6. Сторонние сервисы</h3>
+
+                <p>
+                    Для функционирования сервиса могут использоваться
+                    сторонние технологические и инфраструктурные решения,
+                    включая сервисы автоматизации и искусственного интеллекта.
+                </p>
+
+                <p>
+                    В случаях, когда данные передаются таким поставщикам,
+                    обработка осуществляется в объеме, необходимом
+                    для предоставления соответствующей функции.
+                </p>
+
+                <h3>3.7. Защита данных</h3>
+
+                <p>
+                    Сервис принимает разумные организационные и технические
+                    меры для защиты обрабатываемой информации от
+                    неправомерного доступа, изменения, раскрытия
+                    или уничтожения.
+                </p>
+
+                <p>
+                    При этом ни один способ передачи или хранения
+                    информации в сети Интернет не может гарантировать
+                    абсолютную безопасность данных.
+                </p>
+
+                <h3>3.8. Запрос на удаление данных</h3>
+
+                <p>
+                    Пользователь может обратиться в службу поддержки
+                    с запросом на удаление связанных с ним данных,
+                    если их дальнейшее хранение не требуется
+                    по законным основаниям.
+                </p>
+
+                <h3>3.9. Изменение политики</h3>
+
+                <p>
+                    Настоящая Политика конфиденциальности может
+                    периодически обновляться. Новая редакция
+                    публикуется на этой странице.
+                </p>
+
+            </div>
+
+
+            <!-- PRIVACY UK -->
+
+            <div data-lang="uk">
+
+                <div class="section-heading">
+                    <div class="section-icon">🔐</div>
+
+                    <div>
+                        <h2>Політика конфіденційності</h2>
+                        <p>Обробка та захист користувацьких даних</p>
+                    </div>
+                </div>
+
+                <h3>3.1. Загальні положення</h3>
+
+                <p>
+                    Ця Політика конфіденційності описує основні принципи
+                    обробки даних користувачів Telegram-бота
+                    «Шеф-ІІ / ІІ-Кухар».
+                </p>
+
+                <p>
+                    Сервіс прагне обробляти лише мінімальний обсяг даних,
+                    необхідний для коректної роботи функціональності бота.
+                </p>
+
+                <h3>3.2. Які дані можуть оброблятися</h3>
+
+                <div class="data-table-wrapper">
+
+                    <table class="data-table">
+
+                        <thead>
+                            <tr>
+                                <th>Дані</th>
+                                <th>Мета обробки</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>Telegram ID</td>
+                                <td>
+                                    Ідентифікація користувача
+                                    та робота функцій бота
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Обрана мова</td>
+                                <td>
+                                    Відображення відповідей
+                                    обраною мовою
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Харчові вподобання</td>
+                                <td>
+                                    Персоналізація кулінарних рекомендацій
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Інформація про алергії</td>
+                                <td>
+                                    Врахування користувацьких обмежень
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+                <h3>3.3. Мета обробки</h3>
+
+                <p>
+                    Дані використовуються лише в обсязі, необхідному
+                    для роботи сервісу, персоналізації рекомендацій
+                    та врахування зазначених користувачем обмежень.
+                </p>
+
+                <h3>3.4. Мінімізація даних</h3>
+
+                <p>
+                    Сервіс не прагне збирати відомості, які не потрібні
+                    для надання відповідних функцій.
+                </p>
+
+                <p>
+                    Користувачеві рекомендується не передавати боту
+                    паролі, дані банківських карток, документи,
+                    адресу проживання та інші чутливі відомості.
+                </p>
+
+                <h3>3.5. Telegram</h3>
+
+                <p>
+                    Користувач взаємодіє із сервісом через платформу
+                    Telegram. Обробка даних самою платформою Telegram
+                    регулюється її власними правилами та політикою
+                    конфіденційності.
+                </p>
+
+                <h3>3.6. Сторонні сервіси</h3>
+
+                <p>
+                    Для функціонування сервісу можуть використовуватися
+                    сторонні технологічні та інфраструктурні рішення,
+                    включаючи сервіси автоматизації та штучного інтелекту.
+                </p>
+
+                <h3>3.7. Захист даних</h3>
+
+                <p>
+                    Сервіс вживає розумних організаційних і технічних
+                    заходів для захисту оброблюваної інформації.
+                </p>
+
+                <h3>3.8. Видалення даних</h3>
+
+                <p>
+                    Користувач може звернутися до служби підтримки
+                    із запитом на видалення пов'язаних з ним даних,
+                    якщо їх подальше зберігання не потрібне
+                    на законних підставах.
+                </p>
+
+                <h3>3.9. Зміна політики</h3>
+
+                <p>
+                    Ця Політика конфіденційності може періодично
+                    оновлюватися. Нова редакція публікується
+                    на цій сторінці.
+                </p>
+
+            </div>
+
+
+            <!-- PRIVACY EN -->
+
+            <div data-lang="en">
+
+                <div class="section-heading">
+                    <div class="section-icon">🔐</div>
+
+                    <div>
+                        <h2>Privacy Policy</h2>
+                        <p>Processing and protection of user data</p>
+                    </div>
+                </div>
+
+                <h3>3.1. General provisions</h3>
+
+                <p>
+                    This Privacy Policy describes the basic principles
+                    governing the processing of data of users of the
+                    «Chef-AI / AI-Chef» Telegram bot.
+                </p>
+
+                <p>
+                    The service aims to process only the minimum amount
+                    of data necessary for the proper operation
+                    of the service.
+                </p>
+
+                <h3>3.2. Data that may be processed</h3>
+
+                <div class="data-table-wrapper">
+
+                    <table class="data-table">
+
+                        <thead>
+                            <tr>
+                                <th>Data</th>
+                                <th>Purpose</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>Telegram ID</td>
+                                <td>
+                                    User identification and operation
+                                    of bot features
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Selected language</td>
+                                <td>
+                                    Displaying responses in the
+                                    selected language
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Food preferences</td>
+                                <td>
+                                    Personalization of culinary
+                                    recommendations
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Allergy information</td>
+                                <td>
+                                    Taking user restrictions into account
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+                <h3>3.3. Purpose of processing</h3>
+
+                <p>
+                    Data is processed only to the extent necessary
+                    to identify users, operate the bot, personalize
+                    recommendations and take user-provided restrictions
+                    into account.
+                </p>
+
+                <h3>3.4. Data minimization</h3>
+
+                <p>
+                    The service does not seek to collect information
+                    that is not required to provide the relevant features.
+                </p>
+
+                <p>
+                    Users are advised not to provide passwords,
+                    payment card details, identity documents,
+                    home addresses or other sensitive information
+                    unless specifically required by a feature.
+                </p>
+
+                <h3>3.5. Telegram</h3>
+
+                <p>
+                    Users interact with the service through Telegram.
+                    Data processing by Telegram itself is governed
+                    by Telegram's own terms and privacy policies.
+                </p>
+
+                <h3>3.6. Third-party services</h3>
+
+                <p>
+                    The service may use third-party technological
+                    and infrastructure solutions, including automation
+                    and artificial intelligence services.
+                </p>
+
+                <h3>3.7. Data protection</h3>
+
+                <p>
+                    The service takes reasonable organizational
+                    and technical measures to protect processed information
+                    against unauthorized access, alteration, disclosure
+                    or destruction.
+                </p>
+
+                <h3>3.8. Data deletion</h3>
+
+                <p>
+                    Users may contact support to request deletion
+                    of data associated with them where continued retention
+                    is not required by law.
+                </p>
+
+                <h3>3.9. Policy changes</h3>
+
+                <p>
+                    This Privacy Policy may be updated from time to time.
+                    The current version will be published on this page.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- BOT CTA -->
+
+        <div class="bot-box">
+
+            <p data-lang="ru" class="active">
+                Хотите воспользоваться «Шеф-ИИ»?
+            </p>
+
+            <p data-lang="uk">
+                Хочете скористатися «Шеф-ІІ»?
+            </p>
+
+            <p data-lang="en">
+                Want to use Chef-AI?
+            </p>
+
+            <a
+                class="bot-button"
+                href="https://t.me/cefAI_bot?start=ref_undefined"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                🤖
+                <span data-lang="ru" class="active">
+                    Открыть Telegram-бота
+                </span>
+
+                <span data-lang="uk">
+                    Відкрити Telegram-бота
+                </span>
+
+                <span data-lang="en">
+                    Open Telegram bot
+                </span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div>
+
+                <div class="footer-title">
+                    👨‍🍳 Шеф-ИИ / ИИ-Повар
+                </div>
+
+                <div data-lang="ru" class="footer-text active">
+                    Кулинарный Telegram-сервис с функциями
+                    искусственного интеллекта.
+                </div>
+
+                <div data-lang="uk" class="footer-text">
+                    Кулінарний Telegram-сервіс із функціями
+                    штучного інтелекту.
+                </div>
+
+                <div data-lang="en" class="footer-text">
+                    Culinary Telegram service powered by
+                    artificial intelligence.
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <div class="footer-title">
+                    <span data-lang="ru" class="active">Документы</span>
+                    <span data-lang="uk">Документи</span>
+                    <span data-lang="en">Documents</span>
+                </div>
+
+                <div class="footer-links">
+
+                    <a href="#disclaimer">
+                        <span data-lang="ru" class="active">
+                            Дисклеймер 18+
+                        </span>
+
+                        <span data-lang="uk">
+                            Дисклеймер 18+
+                        </span>
+
+                        <span data-lang="en">
+                            18+ Disclaimer
+                        </span>
+                    </a>
+
+                    <a href="#terms">
+                        <span data-lang="ru" class="active">
+                            Пользовательское соглашение
+                        </span>
+
+                        <span data-lang="uk">
+                            Користувацька угода
+                        </span>
+
+                        <span data-lang="en">
+                            Terms of Use
+                        </span>
+                    </a>
+
+                    <a href="#privacy">
+                        <span data-lang="ru" class="active">
+                            Политика конфиденциальности
+                        </span>
+
+                        <span data-lang="uk">
+                            Політика конфіденційності
+                        </span>
+
+                        <span data-lang="en">
+                            Privacy Policy
+                        </span>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <div class="footer-title">
+
+                    <span data-lang="ru" class="active">
+                        Поддержка
+                    </span>
+
+                    <span data-lang="uk">
+                        Підтримка
+                    </span>
+
+                    <span data-lang="en">
+                        Support
+                    </span>
+
+                </div>
+
+                <div class="footer-links">
+
+                    <a href="mailto:nechipaynetvoe@gmail.com">
+                        nechipaynetvoe@gmail.com
+                    </a>
+
+                    <a
+                        href="https://t.me/cefAI_bot?start=ref_undefined"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        Telegram Bot
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            <span data-lang="ru" class="active">
+                © 2026 Шеф-ИИ / ИИ-Повар. Все права защищены.
+            </span>
+
+            <span data-lang="uk">
+                © 2026 Шеф-ІІ / ІІ-Кухар. Усі права захищені.
+            </span>
+
+            <span data-lang="en">
+                © 2026 Chef-AI / AI-Chef. All rights reserved.
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script>
+
+    /* =========================================================
+       LANGUAGE SWITCHER
+    ========================================================= */
+
+    const languages = ["ru", "uk", "en"];
+
+    let currentLanguage =
+        localStorage.getItem("chefAI_language") || "ru";
+
+    const languageButton =
+        document.getElementById("languageButton");
+
+
+    function setLanguage(language) {
+
+        currentLanguage = language;
+
+        document.documentElement.lang = language;
+
+        document
+            .querySelectorAll("[data-lang]")
+            .forEach(element => {
+
+                element.classList.toggle(
+                    "active",
+                    element.dataset.lang === language
+                );
+
+            });
+
+        languageButton.textContent =
+            language.toUpperCase();
+
+        localStorage.setItem(
+            "chefAI_language",
+            language
+        );
+    }
+
+
+    languageButton.addEventListener(
+        "click",
+        () => {
+
+            const currentIndex =
+                languages.indexOf(currentLanguage);
+
+            const nextIndex =
+                (currentIndex + 1) % languages.length;
+
+            setLanguage(
+                languages[nextIndex]
+            );
+
+        }
+    );
+
+
+    /* =========================================================
+       THEME SWITCHER
+    ========================================================= */
+
+    const themeButton =
+        document.getElementById("themeButton");
+
+    const savedTheme =
+        localStorage.getItem("chefAI_theme");
+
+    if (savedTheme === "light") {
+
+        document.body.classList.add("light");
+
+        themeButton.textContent = "🌙";
+
+    } else {
+
+        themeButton.textContent = "☀️";
+
+    }
+
+
+    themeButton.addEventListener(
+        "click",
+        () => {
+
+            document.body.classList.toggle("light");
+
+            const isLight =
+                document.body.classList.contains("light");
+
+            localStorage.setItem(
+                "chefAI_theme",
+                isLight ? "light" : "dark"
+            );
+
+            themeButton.textContent =
+                isLight ? "🌙" : "☀️";
+
+        }
+    );
+
+
+    /* =========================================================
+       INITIAL LANGUAGE
+    ========================================================= */
+
+    setLanguage(currentLanguage);
+
+</script>
+
+</body>
+</html>
